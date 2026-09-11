@@ -1,0 +1,17 @@
+app = "uganda-vpn-2026"
+primary_region = "jnb"
+
+[build]
+  dockerfile = "Dockerfile"
+
+[[services]]
+  internal_port = 8388
+  protocol = "tcp"
+  auto_stop_machines = false
+  min_machines_running = 1
+  [[services.ports]]
+    port = 8388
+
+[env]
+  PASSWORD = "Uganda2026!"
+  METHOD = "aes-256-gcm"
